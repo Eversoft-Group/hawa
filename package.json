@@ -1,13 +1,21 @@
 {
-  "name": "crawler",
+  "name": "hawa",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "nodemon index.js --watch"
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eversoft-Group/hawa.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eversoft-Group/hawa/issues"
+  },
+  "homepage": "https://github.com/Eversoft-Group/hawa#readme",
   "dependencies": {
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
