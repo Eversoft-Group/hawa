@@ -1,0 +1,19 @@
+{
+  "name": "hawa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eversoft-Group/hawa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eversoft-Group/hawa/issues"
+  },
+  "homepage": "https://github.com/Eversoft-Group/hawa#readme"
+}
