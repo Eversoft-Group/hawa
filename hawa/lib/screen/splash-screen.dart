@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:hawa/config.dart';
 import 'package:hawa/screen/home-screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -35,22 +36,17 @@ class StartState extends State<SplashScreen> {
   initScreen(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: PRIMARY_COLOR,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               child: Image.asset("images/logo.png"),
-              height: 300,
-              width: 250,
+              width: 130,
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             Padding(padding: EdgeInsets.only(top: 20.0)),
-            CircularProgressIndicator(
-              backgroundColor: Colors.white,
-              strokeWidth: 1,
-            )
           ],
         ),
       ),
