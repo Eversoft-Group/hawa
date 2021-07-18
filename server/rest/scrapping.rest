@@ -1,0 +1,1 @@
+GET https://hawa-api.herokuapp.com/api/run-scrapping

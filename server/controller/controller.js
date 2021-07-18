@@ -3,7 +3,6 @@ const browserObject = require("../instagram/browser");
 const scraperController = require("../instagram/page-controller");
 
 exports.create = (req, res) => {
-  console.log("Body is: ", req.body);
   if (!req.body) {
     res.status(400).send({ message: "Content can not be emtpy!" });
     return;
@@ -81,9 +80,20 @@ exports.isInDb = async (req, res) => {
 
 exports.get = async (req, res) => {
   try {
-    const data = await DataDb.find({ $query: {}, $orderby: "date" });
+    const { page = 1, limit = 10 } = req.query;
+    // const previous = `${req.protocol}://${req.get("host")}/api/get?page=${
+    //   page - 1
+    // }&limit=${limit}`;
+    // const next = `${req.protocol}://${req.get("host")}/api/get?page=${
+    //   page + 1
+    // }&limit=${limit}`;
+    const data = await DataDb.find({ $query: {}, $orderby: "date" })
+      .limit(limit)
+      .skip((page - 1) * limit);
     res.status(200).send({
-      message: "Success",
+      total: data.length,
+      previous,
+      next,
       data,
     });
   } catch (error) {
